@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 class Details extends Component {
     render() {
 
-        const { title, links } = this.props;
+        const { title, links, className } = this.props;
 
 
         return (
-            <div className="details">
+            <div className={`${className} details`}>
                 <div className='details__title'>{title}</div>
                 <div className='details__links'>
                     {
@@ -16,7 +16,7 @@ class Details extends Component {
                         })
                     }
                 </div>
-            </div>
+            </ div>
         )
     }
 }
