@@ -5,14 +5,11 @@ import * as actions from '../../actions';
 
 class Purchases extends Component {
 
-
     componentDidMount() {
         this.props.fetchUserPurchases();
     }
 
-
     render() {
-
         const { className } = this.props;
 
         return (
@@ -20,7 +17,7 @@ class Purchases extends Component {
                 {
                     this.props.purchases.map(purchase => {
                         return (
-                            <a onClick={() => this.props.setPurchaseDetail(purchase._id)} key={purchase._id} className='purchase__purchase purchase'>
+                            <a onClick={() => this.props.setPurchaseDetail(purchase._id)} key={purchase._id} className='purchases__purchase purchase'>
                                 <img className='purchase__img' src='http://via.placeholder.com/80x80' />
                             </a>
                         )
@@ -28,15 +25,13 @@ class Purchases extends Component {
                 }
             </div>
         )
-
     }
 }
 
 function mapStateToProps(state) {
-    const { purchases } = state.user
-    return { purchases }
+    const { purchases } = state.user;
+    return { purchases };
 }
-
 
 Purchases = connect(mapStateToProps, actions)(Purchases);
 
