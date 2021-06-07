@@ -54,18 +54,18 @@ export function fetchUserPurchases() {
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'Max Asher Nelson',
+                    name: 'Max Asher',
                     shippingAddress: '1234 West State Street'
                 }
             },
             {
                 _id: 4,
                 total: 19.40,
-                orderNumber: 'A0048248343',
+                orderNumber: 'P02399999',
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'Jordan Hudgens',
+                    name: 'Jordan Johnson',
                     shippingAddress: '1234 West State Street'
                 }
             },
@@ -83,11 +83,11 @@ export function fetchUserPurchases() {
             {
                 _id: 6,
                 total: 19.40,
-                orderNumber: 'A0048248343',
+                orderNumber: 'A004822EE43',
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'Jordan Hudgens',
+                    name: 'Andre Aguirre',
                     shippingAddress: '1234 West State Street'
                 }
             },
