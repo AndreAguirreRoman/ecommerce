@@ -17,15 +17,26 @@ class Review extends Component {
         console.log('fields', fields)
     }
     render() {
+        let subtotal = 0;
+        this.props.cartProducts.map(cartProduct => {
+            subtotal += cartProduct.quantity * cartProduct.product.price;
+        })
         return (
             <div className='review'>
                 <PageTitle className='review__page-title' title='Order Review' />
-                <ReviewForm className='review__form' />
+                <ReviewForm className='review__form' onClick={this.onSubmit} subtotal={subtotal} />
             </div>
         )
     }
 }
 
-Review = connect(null, actions)(Review);
+function mapStateToProps(state) {
+    const { cartProducts } = state.user
+    return {
+        cartProducts
+    }
+}
+
+Review = connect(mapStateToProps, actions)(Review);
 
 export default Review;
